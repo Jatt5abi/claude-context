@@ -17,6 +17,14 @@
 
 ---
 
+## Session Notes (2026-04-17 morning)
+- Set up GitHub sync repo: https://github.com/Jatt5abi/claude-context
+- `gh` authenticated as Jatt5abi on Android/Termux
+- Goodbye trigger workflow established (this session proved it works)
+- On Mac: `git clone https://github.com/Jatt5abi/claude-context.git` then open that folder in Claude Code
+
+---
+
 ## Active Projects
 
 ### Photos — DONE (2026-04-17)
