@@ -12,7 +12,7 @@
 - End of every chat: push updated CLAUDE.md to this GitHub repo (https://github.com/Jatt5abi/claude-context)
 - Same repo cloned on Mac (`git clone https://github.com/Jatt5abi/claude-context.git`) — always in sync
 - Open `~/claude-context` as working directory in Claude Code on any device
-- Stop hook configured in `~/.claude/settings.json` to remind Claude to push at end of every session
+- When Ravinder says anything like "ok i gotta go", "talk to you later", "goodbye", "later", "peace" — stop, update CLAUDE.md with session notes, push to GitHub, then confirm
 - GitHub CLI (`gh`) authenticated as **Jatt5abi** on Android
 
 ---
