@@ -9,9 +9,11 @@
 - **Subscriptions:** ChatGPT Plus ($20/mo), Claude Code
 
 ## How We Work Together
-- End of every chat: push updated CLAUDE.md to this GitHub repo
-- Same repo cloned on Mac — always in sync
-- Open this folder as working directory in Claude Code on any device
+- End of every chat: push updated CLAUDE.md to this GitHub repo (https://github.com/Jatt5abi/claude-context)
+- Same repo cloned on Mac (`git clone https://github.com/Jatt5abi/claude-context.git`) — always in sync
+- Open `~/claude-context` as working directory in Claude Code on any device
+- Stop hook configured in `~/.claude/settings.json` to remind Claude to push at end of every session
+- GitHub CLI (`gh`) authenticated as **Jatt5abi** on Android
 
 ---
 
