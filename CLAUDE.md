@@ -1,0 +1,49 @@
+# Claude Context — Ravinder Gill
+
+## Who I Am
+- **Name:** Ravinder Gill
+- **Family:** Wife Sukhi, Sons Arjun & Vik (Viktor)
+- **Work:** Paving / road construction — drives a spreader truck, chip sealing, slurry work
+- **Devices:** Samsung Android (Termux) + Mac Mini
+- **Storage:** Google Drive 5TB, Google Photos, Samsung Gallery
+- **Subscriptions:** ChatGPT Plus ($20/mo), Claude Code
+
+## How We Work Together
+- End of every chat: push updated CLAUDE.md to this GitHub repo
+- Same repo cloned on Mac — always in sync
+- Open this folder as working directory in Claude Code on any device
+
+---
+
+## Active Projects
+
+### Photos — DONE (2026-04-17)
+- 3,608 photos organized into date folders (2020-09 through 2026-04)
+- Location: `/sdcard/Android/media/com.organized.photos/` (one folder per month)
+- WhatsApp images merged into date folders; DCIM originals deleted
+- **This folder is the ONLY local copy — do not delete until Google Photos backup confirmed**
+
+**TODO next session:**
+- Confirm Google Photos backup completed overnight
+- Hit "Free up space on device" in Google Photos → reclaims ~29GB
+- Verify all date folders backed up before freeing space
+
+---
+
+### 3D Printing — Gridfinity Espresso Drawer (IN PROGRESS)
+- Printer: **Bambu P1S**
+- Goal: Gridfinity boxes to organize espresso drawer
+- Measurements given: 10 x 7.5 units on a 24mm x 24mm grid
+- **Note:** Standard Gridfinity grid is 42mm — need to confirm if user has a custom/mini baseplate or if dimensions need clarifying
+
+**TODO next session:**
+- Confirm exact grid dimensions (24mm per unit?)
+- Find or generate correct STL files for Bambu P1S
+- Check slicer settings
+
+---
+
+## Preferences
+- Terse responses — no fluff
+- No emojis unless asked
+- No trailing summaries ("here's what I did")
