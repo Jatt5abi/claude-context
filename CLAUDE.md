@@ -17,13 +17,13 @@
 
 ---
 
-## Session Notes (2026-04-17 evening)
+## Session Notes (2026-04-17 — full day)
 
 ### Gridfinity Espresso Drawer
 - Confirmed standard Gridfinity 42mm grid
-- Drawer dimensions confirmed: 17" × 12⅝" × 3¼" opening = 431.8 × 320.7 × 82.6mm
-- Fits a **10×7 standard 42mm Gridfinity baseplate** (420×294mm with small margins)
-- Tried GridCoffee (78mm grid system) — skipped, mostly plain trays, not enough dedicated holders
+- Drawer dimensions: 17" × 12⅝" × 3¼" opening = 431.8 × 320.7 × 82.6mm
+- Fits **10×7 standard 42mm Gridfinity baseplate** (420×294mm with small margins)
+- Tried GridCoffee (78mm grid system) — skipped, mostly plain trays
 - Moka pot accessories removed from drawer (modded basket, dosing ring, tamp for moka)
 
 **Final drawer item list (Bianca V3 only):**
@@ -34,14 +34,14 @@
 5. Sweetener box (dollar tree wooden box)
 6. Spouted portafilter (deprioritized — print last)
 7. Dosing ring
-8. Leveler tool (flat, clears opening easily)
+8. Leveler tool (lay flat, clears opening easily)
 9. Flick WDT tool (lay flat — too tall standing)
 10. Timemore spring-loaded tamp (lay flat — too tall standing)
 
 **Bins found on MakerWorld:**
 - Baskets + puck screens: penguinprints — https://makerworld.com/en/models/718533
 - Portafilter (round): https://makerworld.com/en/models/718546 (2×2, 83.5mm)
-- Bezerra portafilter bin also in Downloads (3×6, deprioritized)
+- Bezerra portafilter bin in Downloads (3×6, deprioritized)
 
 **Plan for remaining items (tamp, WDT, leveler, dosing ring, scale, sweetener box):**
 - Use **ToolTrace** (https://www.tooltrace.ai/) — lay tools flat on paper, take top-down photo, generates custom Gridfinity STL inserts
@@ -65,7 +65,6 @@
 **TODO:**
 - Confirm Google Photos backup completed
 - Hit "Free up space on device" in Google Photos → reclaims ~29GB
-- Verify all date folders backed up before freeing space
 
 ---
 
@@ -73,37 +72,48 @@
 - Printer: **Bambu P1S**
 - Drawer: 431.8 × 320.7mm, 82.6mm opening height
 - Baseplate: **10×7 standard 42mm Gridfinity**
-- See session notes above for full item list and bin plan
+- See item list and bin plan above
 
 ---
 
-### China 25th Anniversary Video (IN PROGRESS)
+### China 25th Anniversary Video — COMPLETE (2026-04-17)
 
-**Files:**
-- Main film + music: `/home/ravi/Desktop/China/edit/25th_Anniversary_FINAL.mp4` (504s)
-- Film + end credits: `/home/ravi/Desktop/China/edit/25th_Anniversary_WITH_CREDITS.mp4` (9m 39s)
-- YouTube stills video: `/home/ravi/Desktop/China/edit/China_25th_Anniversary_Photos.mp4` (7m 43s)
+**Final output files:**
+| File | Duration | Size | Notes |
+|------|----------|------|-------|
+| `25th_Anniversary_FINAL_v2.mp4` | 11m 14s | 734MB | Film + music, v2 edit |
+| `25th_Anniversary_v2_WITH_CREDITS.mp4` | 12m 29s | 744MB | Film + music + end credits |
+| `China_25th_Anniversary_Photos.mp4` | 7m 43s | 62MB | All 188 photos, YouTube stills |
 
-**Rebuild in progress (v2 — as of 2026-04-17 evening):**
-- Ravi flagged v1 missed all Hong Kong footage, too much hotel room, missed ferry crossing
-- Rebuilt `build_cinematic.py` with corrected edit list:
-  - **Added:** HK rooftop breakfast (CHINAVID1), TST waterfront (0044), Sukhi HK walk (0045), Ravi HK (0025)
-  - **Added:** Ravi & Sukhi at terminal (0083), train crossing HK→mainland (ChinaVid3)
-  - **Added:** Shenzhen wave building (0090), couple selfie (0091)
-  - **Added ferry centrepiece:** 0140 → 0143 → 0155 (Pudong REVEAL) → 0156 (docking)
-  - **Added:** Peace Hotel Bund (0184), Pudong at night (0210)
-  - **Removed:** hotel room towers (0087), hotel window (0115)
-- Script uses beat-name-only caching (no idx in filename) — re-run safe
-- Build running now: `python3 /home/ravi/Desktop/China/build_cinematic.py`
-- Output: `/home/ravi/Desktop/China/edit/25th_Anniversary_Cinematic.mp4`
-- After build completes: need to mux with music (same `music.mp3` + `music2.mp3` approach as before)
-- Then rebuild `build_credits_and_stills.py` to append credits to the new film
+All files at: `/home/ravi/Desktop/China/edit/`
 
-**TODO next session:**
-- Check v2 build output, verify HK + ferry sequence looks right
-- Re-mux with music (extend/loop as needed for new duration ~10-11 min)
-- Rebuild credits (append to new FINAL)
-- Upload YouTube stills video for family in India
+**Build scripts:**
+- `build_cinematic.py` — main film (32 clips, v2 edit)
+- `build_credits_and_stills.py` — end credits + YouTube stills
+
+**v2 edit narrative (32 clips):**
+- Opening title
+- **HK:** rooftop breakfast (CHINAVID1), TST waterfront (0044), Sukhi walking HK skyline (0045), Ravi in HK (0025)
+- **Transit:** lounge (0062), Ravi & Sukhi at terminal (0083), train window crossing (ChinaVid3)
+- **Shenzhen:** skyline arrival (ChinaVid4), wave building (0090), couple selfie (0091), Ravinder wonder (0103), Ravinder still (0203)
+- **Coffee:** detail shot (0047), Roastery stairs (0197)
+- **Ferry centrepiece:** boarding (0140) → mid-river (0143) → Pudong REVEAL (0155) → docking (0156)
+- **Bund:** Sukhi stills (0172, 0175), Peace Hotel (0184)
+- **Temple:** red lanterns (0232)
+- **Night:** Bund walk (0216), Pudong skyline (0210), neon streets (0208)
+- **Grandeur:** Shanghai Tower aerial (0237)
+- **Art:** digital wall (0247), lotus architecture (0250), neon climax (0252)
+- **Home:** Ravinder with son (0273)
+- Finale title
+
+**Clips removed from v1:** hotel room towers (0087), hotel window (0115)
+
+**Music:**
+- `music2.mp3` (128s intro) + `music.mp3` (looped, 546s) = 674s bed → `music_v2.mp3`
+- Build scripts cache clips by beat name (not index) — re-run safe
+
+**TODO:**
+- Upload `China_25th_Anniversary_Photos.mp4` to YouTube for family in India
 
 ---
 
