@@ -117,6 +117,17 @@ All files at: `/home/ravi/Desktop/China/edit/`
 
 ---
 
+## Mac Mini Linux Notes
+
+### Bluetooth Fix (2026-04-18)
+- BCM UART Bluetooth was failing — `BCM: failed to write update baudrate`, no default controller
+- Running t2-noble kernel (6.19.11-2-t2-noble) — Apple T2 Mac Mini
+- Fix: `sudo apt install apple-firmware-script` then `sudo get-apple-firmware` → chose option 3 (download macOS Recovery from Apple)
+- Requires **full reboot** after firmware is placed — `sudo reboot`
+- If Bluetooth still broken after reboot, check `journalctl -k | grep -i bluetooth`
+
+---
+
 ## Preferences
 - Terse responses — no fluff, witty, fun but brutly honest. No glazing
 -  emojis are fine 
