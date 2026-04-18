@@ -17,7 +17,9 @@
 
 ---
 
-## Session Notes (2026-04-17 afternoon)
+## Session Notes (2026-04-17 evening)
+
+### Gridfinity Espresso Drawer
 - Confirmed standard Gridfinity 42mm grid
 - Drawer dimensions confirmed: 17" × 12⅝" × 3¼" opening = 431.8 × 320.7 × 82.6mm
 - Fits a **10×7 standard 42mm Gridfinity baseplate** (420×294mm with small margins)
@@ -72,6 +74,36 @@
 - Drawer: 431.8 × 320.7mm, 82.6mm opening height
 - Baseplate: **10×7 standard 42mm Gridfinity**
 - See session notes above for full item list and bin plan
+
+---
+
+### China 25th Anniversary Video (IN PROGRESS)
+
+**Files:**
+- Main film + music: `/home/ravi/Desktop/China/edit/25th_Anniversary_FINAL.mp4` (504s)
+- Film + end credits: `/home/ravi/Desktop/China/edit/25th_Anniversary_WITH_CREDITS.mp4` (9m 39s)
+- YouTube stills video: `/home/ravi/Desktop/China/edit/China_25th_Anniversary_Photos.mp4` (7m 43s)
+
+**Rebuild in progress (v2 — as of 2026-04-17 evening):**
+- Ravi flagged v1 missed all Hong Kong footage, too much hotel room, missed ferry crossing
+- Rebuilt `build_cinematic.py` with corrected edit list:
+  - **Added:** HK rooftop breakfast (CHINAVID1), TST waterfront (0044), Sukhi HK walk (0045), Ravi HK (0025)
+  - **Added:** Ravi & Sukhi at terminal (0083), train crossing HK→mainland (ChinaVid3)
+  - **Added:** Shenzhen wave building (0090), couple selfie (0091)
+  - **Added ferry centrepiece:** 0140 → 0143 → 0155 (Pudong REVEAL) → 0156 (docking)
+  - **Added:** Peace Hotel Bund (0184), Pudong at night (0210)
+  - **Removed:** hotel room towers (0087), hotel window (0115)
+- Script uses beat-name-only caching (no idx in filename) — re-run safe
+- Build running now: `python3 /home/ravi/Desktop/China/build_cinematic.py`
+- Output: `/home/ravi/Desktop/China/edit/25th_Anniversary_Cinematic.mp4`
+- After build completes: need to mux with music (same `music.mp3` + `music2.mp3` approach as before)
+- Then rebuild `build_credits_and_stills.py` to append credits to the new film
+
+**TODO next session:**
+- Check v2 build output, verify HK + ferry sequence looks right
+- Re-mux with music (extend/loop as needed for new duration ~10-11 min)
+- Rebuild credits (append to new FINAL)
+- Upload YouTube stills video for family in India
 
 ---
 
