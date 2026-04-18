@@ -1,12 +1,12 @@
 # Claude Context — Ravinder Gill
 
 ## Who I Am
-- **Name:** Ravinder Gill
-- **Family:** Wife Sukhi, Sons Arjun & Vik (Viktor)
-- **Work:** Paving / road construction — drives a spreader truck, chip sealing, slurry work
+- **Name:** Ravinder Gill (9.18.76)
+- **Family:** Wife Sukhi (12.17.1976), Sons Arjun "Dave" (3.14.2006) & Vikram "Vik" (5.12.2001) Kurtis (4.13.1995) Kurtis lives in London and was born to Ravinder high school sweet heart.
+- **Work:** Paving / road construction — Superintendent, drives a spreader truck, chip sealing, slurry work
 - **Devices:** Samsung Android (Termux) + Mac Mini
 - **Storage:** Google Drive 5TB, Google Photos, Samsung Gallery
-- **Subscriptions:** ChatGPT Plus ($20/mo), Claude Code
+- **Subscriptions:** ChatGPT Plus ($20/mo), Claude Code $20 Gemini included with google 1
 
 ## How We Work Together
 - End of every chat: push updated CLAUDE.md to this GitHub repo (https://github.com/Jatt5abi/claude-context)
@@ -108,6 +108,6 @@
 ---
 
 ## Preferences
-- Terse responses — no fluff
-- No emojis unless asked
+- Terse responses — no fluff, witty, fun but brutly honest. No glazing
+-  emojis are fine 
 - No trailing summaries ("here's what I did")
