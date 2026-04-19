@@ -48,9 +48,8 @@
 - Use standard 42mm grid in ToolTrace so bins snap to standard baseplate
 
 **TODO next session:**
-- Ravinder to experiment with ToolTrace and report back
 - Confirm Google Photos backup completed + free up ~29GB on device
-- Once all bins confirmed, print baseplate (10×7) and all bins
+- ToolTrace for scale, dosing ring, leveler, WDT, tamp, sweetener box bins
 
 ---
 
@@ -71,8 +70,22 @@
 ### 3D Printing — Gridfinity Espresso Drawer (IN PROGRESS)
 - Printer: **Bambu P1S**
 - Drawer: 431.8 × 320.7mm, 82.6mm opening height
-- Baseplate: **10×7 standard 42mm Gridfinity**
-- See item list and bin plan above
+- Baseplate: **10×7.5 42mm Gridfinity** (431×320mm input) — split into 4 plates by Perplexing Labs generator
+- Filament: Eryone PETG Jet Black
+- Plate 1 PRINTING (with ironing, ~3hrs left as of 2026-04-19 00:00)
+- Plates 2/3/4: print WITHOUT pause — glue 6×2mm magnets in after with super glue
+- 800 magnets total ordered (200 on hand, 600 incoming)
+- Right side strip: 11mm × 5 cells (210mm) — brush tray
+- Back strip: 26mm — built into baseplate, no extra bin
+
+**Bins status:**
+- Slim brush tray: DESIGNED in OpenSCAD, saved to ~/Documents/ — print 2×
+- Spoon tray: NOT designed yet — waiting to see slim tray print first
+- Basket/puck screen ladder holder: DOWNLOADED ~/Downloads/espresso_round_extracted/ — NOT printed
+- Portafilter bin: DEPRIORITIZED
+- Scale, dosing ring, leveler, WDT, tamp, sweetener: use ToolTrace
+
+**Lesson learned:** Don't pause print for magnets — cold layer line is visible. Glue after instead.
 
 ---
 
