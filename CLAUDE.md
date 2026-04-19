@@ -3,28 +3,76 @@
 ## Who I Am
 - **Name:** Ravinder Gill (9.18.76)
 - **Family:** Wife Sukhi (12.17.1976), Sons Arjun "Dave" (3.14.2006) & Vikram "Vik" (5.12.2001) Kurtis (4.13.1995) Kurtis lives in London and was born to Ravinder high school sweet heart.
-- **Work:** Paving / road construction — Superintendent, drives a spreader truck, chip sealing, slurry work
-- **Devices:** Samsung Android (Termux) + Mac Mini
+- **Work:** Paving / road construction — Superintendent, drives a spreader truck, chip sealing, slurry work. Off season Nov–Mar.
+- **Devices:** Samsung Galaxy Z Fold 3 SM-F966U1 (Android 16) + Mac Mini (Apple T2, running Ubuntu t2-noble kernel 6.19.11)
 - **Storage:** Google Drive 5TB, Google Photos, Samsung Gallery
-- **Subscriptions:** ChatGPT Plus ($20/mo), Claude Code $20 Gemini included with google 1
+- **Subscriptions:** ChatGPT Plus ($20/mo), Claude Code $20, Gemini included with Google One
 
 ## How We Work Together
 - End of every chat: push updated CLAUDE.md to this GitHub repo (https://github.com/Jatt5abi/claude-context)
-- Same repo cloned on Mac (`git clone https://github.com/Jatt5abi/claude-context.git`) — always in sync
-- Open `~/claude-context` as working directory in Claude Code on any device
+- Same repo cloned on Mac (`~/claude-context`) — always in sync
+- When session gets long and Claude starts making mistakes: update CLAUDE.md, push, start fresh chat
 - When Ravinder says anything like "ok i gotta go", "talk to you later", "goodbye", "later", "peace", "have a coffee", "play with X" — stop, update CLAUDE.md with session notes, push to GitHub, then confirm
 - GitHub CLI (`gh`) authenticated as **Jatt5abi** on Android
 
 ---
 
-## Session Notes (2026-04-17 — full day)
+## Session Notes (2026-04-19)
 
-### Gridfinity Espresso Drawer
-- Confirmed standard Gridfinity 42mm grid
-- Drawer dimensions: 17" × 12⅝" × 3¼" opening = 431.8 × 320.7 × 82.6mm
-- Fits **10×7 standard 42mm Gridfinity baseplate** (420×294mm with small margins)
-- Tried GridCoffee (78mm grid system) — skipped, mostly plain trays
-- Moka pot accessories removed from drawer (modded basket, dosing ring, tamp for moka)
+### scrcpy — Phone Mirror to Linux (WORKING)
+- Samsung Z Fold 3 mirrors to Mac Mini via scrcpy 3.3.1
+- Snap version broken (gpu-2404 slot issue) — use binary from `~/scrcpy-linux-x86_64-v3.3.1/`
+- **Wired (USB):** `~/scrcpy-linux-x86_64-v3.3.1/scrcpy -d`
+- **Wireless:** connect via `adb connect IP:PORT` first, then `~/scrcpy-linux-x86_64-v3.3.1/scrcpy --tcpip=IP:PORT`
+- Wireless port changes every time you leave/re-enter Wireless Debugging on phone
+- USB File Transfer (MTP) mode required for wired adb
+- Mouse scroll wheel = swipe up/down in TikTok — works great
+- Clipboard sync phone→Mac works; Mac→phone needs `--clipboard-autosync` flag
+
+### File Transfer Phone ↔ Mac
+- **LocalSend** installed (snap) — works but not seamless, requires IP/PIN on same WiFi
+- Google Drive 5TB is fallback
+
+### Office Room Setup (IN PROGRESS)
+- Downstairs room (was parents' room) being converted to print lab / Mac office
+- Currently has: sit/stand TikTok 80 desk, 2 monitors (Vik's), Mac Mini, standing mirror, chest of drawers, comfy chair
+- Bed needs to go to trash (brother's old bed)
+- Plan: printer + Mac in one room, build it out slowly
+- Considering: 49" curved ultrawide from AliExpress (~$117, verify specs before ordering), 2× Pioneer passive bookshelf speakers
+- Amp ordered: **Facmogu F900S** 160W Bluetooth 5.0 amp, 80W×2, comes with 12V PSU — $28 — plug speakers in, pair Mac via BT
+- Chair coaster idea: build wood base with casters to raise + roll the comfy chair 😄
+
+### Future Ideas
+- **Punjabi 3D prints** — Khanda, Ik Onkar, Punjabi script nameplates for trucker dashboards. Currently only cheap plastic imports from India. Could sell on Etsy + Facebook Punjabi trucker groups. $20-30 per piece.
+- Day trading — learn over summer, paper trade first. Need $25K minimum (PDT rule), $50-100K to replace income. Off season starts Nov 2026.
+
+---
+
+## Active Projects
+
+### 3D Printing — Gridfinity Espresso Drawer (IN PROGRESS)
+- Printer: **Bambu P1S**
+- Drawer: 431.8 × 320.7mm, 82.6mm opening height
+- Baseplate: **10×7.5 42mm Gridfinity** — split into 4 plates
+
+**Baseplate status (2026-04-19):**
+- Plate 1: PRINTED but magnets misaligned due to over-careful placement at layer resume — may reprint, check if bins still snap first
+- Plate 2: DONE — clean, no pause, magnets glued after ✅
+- Plate 3: DONE ✅
+- Plate 4: PRINTING (~57 min remaining as of session end)
+- Filament: Eryone PETG Jet Black
+
+**Key lessons:**
+- NO pause for magnets — cold layer line visible + plate shifts on resume. Glue 6×2mm magnets after with super glue.
+- Normal placement method: angle plate in, push to end guide, let it sit. Don't fidget with corners.
+- Eryone filament: strip cardboard hub, bare spool fits inside Bambu spool shell — no respooling needed. AMS reads fine.
+
+**Bins status:**
+- Slim brush tray: DESIGNED in OpenSCAD (`~/Documents/`), PRINTING NOW in matte black PETG (~57 min). Print 2×. Mirror along X axis in Bambu to fix magnet hole orientation.
+- Spoon tray: NOT designed — wait to see brush tray result first
+- Basket/puck screen ladder holder: DOWNLOADED `~/Downloads/espresso_round_extracted/` — NOT printed
+- Portafilter bin: DEPRIORITIZED
+- Scale, dosing ring, leveler, WDT, tamp, sweetener: use **ToolTrace** (https://www.tooltrace.ai/) — lay flat, photo, generates custom Gridfinity STL
 
 **Final drawer item list (Bianca V3 only):**
 1. 18-24g basket (spare)
@@ -32,116 +80,51 @@
 3. Acaia Lunar scale
 4. 2 puck screens
 5. Sweetener box (dollar tree wooden box)
-6. Spouted portafilter (deprioritized — print last)
+6. Spouted portafilter (deprioritized)
 7. Dosing ring
-8. Leveler tool (lay flat, clears opening easily)
-9. Flick WDT tool (lay flat — too tall standing)
-10. Timemore spring-loaded tamp (lay flat — too tall standing)
+8. Leveler tool (lay flat)
+9. Flick WDT tool (lay flat)
+10. Timemore spring-loaded tamp (lay flat)
 
-**Bins found on MakerWorld:**
+**MakerWorld bins:**
 - Baskets + puck screens: penguinprints — https://makerworld.com/en/models/718533
 - Portafilter (round): https://makerworld.com/en/models/718546 (2×2, 83.5mm)
-- Bezerra portafilter bin in Downloads (3×6, deprioritized)
-
-**Plan for remaining items (tamp, WDT, leveler, dosing ring, scale, sweetener box):**
-- Use **ToolTrace** (https://www.tooltrace.ai/) — lay tools flat on paper, take top-down photo, generates custom Gridfinity STL inserts
-- Use standard 42mm grid in ToolTrace so bins snap to standard baseplate
-
-**TODO next session:**
-- Confirm Google Photos backup completed + free up ~29GB on device
-- ToolTrace for scale, dosing ring, leveler, WDT, tamp, sweetener box bins
 
 ---
-
-## Active Projects
 
 ### Photos — DONE (2026-04-17)
 - 3,608 photos organized into date folders (2020-09 through 2026-04)
-- Location: `/sdcard/Android/media/com.organized.photos/` (one folder per month)
-- WhatsApp images merged into date folders; DCIM originals deleted
-- **This folder is the ONLY local copy — do not delete until Google Photos backup confirmed**
-
-**TODO:**
-- Confirm Google Photos backup completed
-- Hit "Free up space on device" in Google Photos → reclaims ~29GB
-
----
-
-### 3D Printing — Gridfinity Espresso Drawer (IN PROGRESS)
-- Printer: **Bambu P1S**
-- Drawer: 431.8 × 320.7mm, 82.6mm opening height
-- Baseplate: **10×7.5 42mm Gridfinity** (431×320mm input) — split into 4 plates by Perplexing Labs generator
-- Filament: Eryone PETG Jet Black
-- Plate 1 PRINTING (with ironing, ~3hrs left as of 2026-04-19 00:00)
-- Plates 2/3/4: print WITHOUT pause — glue 6×2mm magnets in after with super glue
-- 800 magnets total ordered (200 on hand, 600 incoming)
-- Right side strip: 11mm × 5 cells (210mm) — brush tray
-- Back strip: 26mm — built into baseplate, no extra bin
-
-**Bins status:**
-- Slim brush tray: DESIGNED in OpenSCAD, saved to ~/Documents/ — print 2×
-- Spoon tray: NOT designed yet — waiting to see slim tray print first
-- Basket/puck screen ladder holder: DOWNLOADED ~/Downloads/espresso_round_extracted/ — NOT printed
-- Portafilter bin: DEPRIORITIZED
-- Scale, dosing ring, leveler, WDT, tamp, sweetener: use ToolTrace
-
-**Lesson learned:** Don't pause print for magnets — cold layer line is visible. Glue after instead.
+- Location: `/sdcard/Android/media/com.organized.photos/`
+- **TODO:** Confirm Google Photos backup → hit "Free up space" → reclaims ~29GB
 
 ---
 
 ### China 25th Anniversary Video — COMPLETE (2026-04-17)
 
-**Final output files:**
-| File | Duration | Size | Notes |
-|------|----------|------|-------|
-| `25th_Anniversary_FINAL_v2.mp4` | 11m 14s | 734MB | Film + music, v2 edit |
-| `25th_Anniversary_v2_WITH_CREDITS.mp4` | 12m 29s | 744MB | Film + music + end credits |
-| `China_25th_Anniversary_Photos.mp4` | 7m 43s | 62MB | All 188 photos, YouTube stills |
+| File | Duration | Size |
+|------|----------|------|
+| `25th_Anniversary_FINAL_v2.mp4` | 11m 14s | 734MB |
+| `25th_Anniversary_v2_WITH_CREDITS.mp4` | 12m 29s | 744MB |
+| `China_25th_Anniversary_Photos.mp4` | 7m 43s | 62MB |
 
 All files at: `/home/ravi/Desktop/China/edit/`
-
-**Build scripts:**
-- `build_cinematic.py` — main film (32 clips, v2 edit)
-- `build_credits_and_stills.py` — end credits + YouTube stills
-
-**v2 edit narrative (32 clips):**
-- Opening title
-- **HK:** rooftop breakfast (CHINAVID1), TST waterfront (0044), Sukhi walking HK skyline (0045), Ravi in HK (0025)
-- **Transit:** lounge (0062), Ravi & Sukhi at terminal (0083), train window crossing (ChinaVid3)
-- **Shenzhen:** skyline arrival (ChinaVid4), wave building (0090), couple selfie (0091), Ravinder wonder (0103), Ravinder still (0203)
-- **Coffee:** detail shot (0047), Roastery stairs (0197)
-- **Ferry centrepiece:** boarding (0140) → mid-river (0143) → Pudong REVEAL (0155) → docking (0156)
-- **Bund:** Sukhi stills (0172, 0175), Peace Hotel (0184)
-- **Temple:** red lanterns (0232)
-- **Night:** Bund walk (0216), Pudong skyline (0210), neon streets (0208)
-- **Grandeur:** Shanghai Tower aerial (0237)
-- **Art:** digital wall (0247), lotus architecture (0250), neon climax (0252)
-- **Home:** Ravinder with son (0273)
-- Finale title
-
-**Clips removed from v1:** hotel room towers (0087), hotel window (0115)
-
-**Music:**
-- `music2.mp3` (128s intro) + `music.mp3` (looped, 546s) = 674s bed → `music_v2.mp3`
-- Build scripts cache clips by beat name (not index) — re-run safe
-
-**TODO:**
-- Upload `China_25th_Anniversary_Photos.mp4` to YouTube for family in India
+**TODO:** Upload `China_25th_Anniversary_Photos.mp4` to YouTube for family in India
 
 ---
 
 ## Mac Mini Linux Notes
 
+### scrcpy Binary Location
+- Working binary: `~/scrcpy-linux-x86_64-v3.3.1/scrcpy`
+- Snap version broken — don't use `/snap/bin/scrcpy`
+
 ### Bluetooth Fix (2026-04-18)
-- BCM UART Bluetooth was failing — `BCM: failed to write update baudrate`, no default controller
-- Running t2-noble kernel (6.19.11-2-t2-noble) — Apple T2 Mac Mini
-- Fix: `sudo apt install apple-firmware-script` then `sudo get-apple-firmware` → chose option 3 (download macOS Recovery from Apple)
-- Requires **full reboot** after firmware is placed — `sudo reboot`
-- If Bluetooth still broken after reboot, check `journalctl -k | grep -i bluetooth`
+- BCM UART Bluetooth was failing — fixed with `sudo apt install apple-firmware-script` then `sudo get-apple-firmware` (option 3) + full reboot
 
 ---
 
 ## Preferences
-- Terse responses — no fluff, witty, fun but brutly honest. No glazing
--  emojis are fine 
+- Terse responses — no fluff, witty, fun but brutally honest. No glazing
+- Emojis are fine
 - No trailing summaries ("here's what I did")
+- Long sessions go sideways — reset early, push to GitHub, start fresh chat
