@@ -53,8 +53,11 @@
 
 ### 3D Printing — Gridfinity Espresso Drawer (IN PROGRESS)
 - Printer: **Bambu P1S**
-- Drawer: 431.8 × 320.7mm, 82.6mm opening height
-- Baseplate: **10×7.5 42mm Gridfinity** — split into 5 pieces (not 4)
+- Drawer: 431.8 × 320.7mm (17" × 12⅝"), 82.6mm opening height
+- Baseplate: **Gridflock** system — STL: `~/Downloads/gridfinity-gridflock-baseplate-250x250-320x431-08e58.stl`
+- Grid layout: **7×10 cells** at 42mm = **294mm × 420mm** usable grid area
+- Strip remaining along long side (R): **23mm actual measured** (not 26mm, not half-cell — measure confirmed with calipers)
+- Strip bin body width: **22.5mm** (23mm - 0.5mm clearance)
 
 **Baseplate status (2026-04-19 evening):**
 - 3 smaller plates: DONE, magnets press-fit in ✅
@@ -76,11 +79,12 @@
 - Magnet positions: diagonal corners (top-left + bottom-right)
 
 **Strip bins (custom OpenSCAD):**
-- Drawer has a 26mm strip at back (320.7 - 294mm) with no full grid cells
-- Test piece designed: `~/Documents/slim_tray_26x42_test.scad` — 25.5×41.5mm footprint, correct 2-step Gridfinity profile, rounded corners
-- Test piece printed but may be slightly too wide — need to measure actual gap before full tray
-- Original slim tray (210×26mm) was wrong — flat foot, too wide, sat on plate instead of snapping in
-- **TODO:** Measure exact strip gap, adjust width, then design full brush tray for the strip
+- Strip gap is **23mm measured** (calipers) — do NOT calculate from drawer math, always use measured value
+- Test piece: `~/Documents/slim_tray_26x42_test.scad` — body_w=22.0mm, body_l=41.5mm, foot shaved 2.4mm at bottom to clear baseplate magnet pockets
+- Full tray: `~/Documents/strip_brush_tray_5cell.scad` — 5 individual gridfinity feet, 209.5mm total length, 15mm walls, magnet holes per cell
+- Magnet holes: 6.4mm dia × 2.4mm deep (0.4mm tolerance on both — 6×2mm magnets print undersized)
+- Previous attempts that FAILED: 25.5mm too wide, 22.5mm too wide, foot bottom catches baseplate magnet pockets → fixed with 2.4mm shave
+- **TODO:** Print 22.0mm shaved test, confirm fit, then print full 5-cell tray
 
 **Basket holder:**
 - Printing: `Gridfinity_Espresso_Basket_Holders_4_Sizes.3mf` — 83.5×83.5×22.6mm size
@@ -94,8 +98,8 @@
 
 **Bins TODO:**
 - ✅ Basket holder — PRINTING
-- ⬜ Strip test piece — PRINTED, needs fit check
-- ⬜ Full brush tray for 26mm strip — measure gap first
+- ⬜ Strip test piece v4 (22mm, foot shaved 2.4mm) — ready to print
+- ⬜ Full brush tray 5-cell — ready to print after test confirms fit
 - ⬜ Dosing ring bin (76mm cylinder cutout)
 - ⬜ Leveler bin (63.5mm cylinder cutout)
 - ⬜ Scale, WDT, tamp, spoon tray — design later
