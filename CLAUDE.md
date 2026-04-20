@@ -79,12 +79,15 @@
 - Magnet positions: diagonal corners (top-left + bottom-right)
 
 **Strip bins (custom OpenSCAD):**
-- Strip gap is **23mm measured** (calipers) — do NOT calculate from drawer math, always use measured value
-- Test piece: `~/Documents/slim_tray_26x42_test.scad` — body_w=22.0mm, body_l=41.5mm, foot shaved 2.4mm at bottom to clear baseplate magnet pockets
+- Strip gap is **23mm measured** (calipers) — do NOT calculate from drawer math
+- The strip has its own **custom gridfinity cells** — same 4-sided profile as full cells, just 23mm wide. Bins snap in exactly like standard bins.
+- Test piece: `~/Documents/slim_tray_26x42_test.scad` — body_w=22.0mm, body_l=41.5mm
 - Full tray: `~/Documents/strip_brush_tray_5cell.scad` — 5 individual gridfinity feet, 209.5mm total length, 15mm walls, magnet holes per cell
-- Magnet holes: 6.4mm dia × 2.4mm deep (0.4mm tolerance on both — 6×2mm magnets print undersized)
-- Previous attempts that FAILED: 25.5mm too wide, 22.5mm too wide, foot bottom catches baseplate magnet pockets → fixed with 2.4mm shave
-- **TODO:** Print 22.0mm shaved test, confirm fit, then print full 5-cell tray
+- Magnet holes: 6.4mm dia × 2.4mm deep (0.4mm tolerance — 6×2mm magnets print undersized)
+- **Foot profile MODIFIED** — step 1 bottom chamfer extended to 1.8mm tall (was 0.8mm) so it tapers longer before going straight — fixes catching on magnet pocket rims
+- Straight section shortened to 0.8mm (was 1.8mm), total foot height stays 4.75mm
+- Previous failed attempts: 25.5mm, 22.5mm too wide; 2.4mm shave worked to slide in but too shallow for magnets; flat-wall on one side = wrong (cells are 4-sided standard profile)
+- **TODO:** Confirm extended-taper version fits and magnets catch, then print full 5-cell tray
 
 **Basket holder:**
 - Printing: `Gridfinity_Espresso_Basket_Holders_4_Sizes.3mf` — 83.5×83.5×22.6mm size
@@ -98,7 +101,7 @@
 
 **Bins TODO:**
 - ✅ Basket holder — PRINTING
-- ⬜ Strip test piece v4 (22mm, foot shaved 2.4mm) — ready to print
+- ⬜ Strip test piece v5 (22mm, extended taper 1.8mm) — PRINTING
 - ⬜ Full brush tray 5-cell — ready to print after test confirms fit
 - ⬜ Dosing ring bin (76mm cylinder cutout)
 - ⬜ Leveler bin (63.5mm cylinder cutout)
