@@ -14,6 +14,7 @@
 - When session gets long and Claude starts making mistakes: update CLAUDE.md, push, start fresh chat
 - When Ravinder says anything like "ok i gotta go", "talk to you later", "goodbye", "later", "peace", "have a coffee", "play with X" — stop, update CLAUDE.md with session notes, push to GitHub, then confirm
 - GitHub CLI (`gh`) authenticated as **Jatt5abi** on Android
+- Delete photos from ~/Downloads after viewing — keep it clean
 
 ---
 
@@ -53,26 +54,56 @@
 ### 3D Printing — Gridfinity Espresso Drawer (IN PROGRESS)
 - Printer: **Bambu P1S**
 - Drawer: 431.8 × 320.7mm, 82.6mm opening height
-- Baseplate: **10×7.5 42mm Gridfinity** — split into 4 plates
+- Baseplate: **10×7.5 42mm Gridfinity** — split into 5 pieces (not 4)
 
-**Baseplate status (2026-04-19):**
-- Plate 1: PRINTED but magnets misaligned due to over-careful placement at layer resume — may reprint, check if bins still snap first
-- Plate 2: DONE — clean, no pause, magnets glued after ✅
-- Plate 3: DONE ✅
-- Plate 4: PRINTING (~57 min remaining as of session end)
+**Baseplate status (2026-04-19 evening):**
+- 3 smaller plates: DONE, magnets press-fit in ✅
+- 2 larger plates (5×4 each): MAGNETS IN PROGRESS — 160 magnets remaining, fingers cooked 😂
 - Filament: Eryone PETG Jet Black
+- Magnets: 6×2mm, press-fit into pockets (no glue needed)
 
 **Key lessons:**
-- NO pause for magnets — cold layer line visible + plate shifts on resume. Glue 6×2mm magnets after with super glue.
-- Normal placement method: angle plate in, push to end guide, let it sit. Don't fidget with corners.
-- Eryone filament: strip cardboard hub, bare spool fits inside Bambu spool shell — no respooling needed. AMS reads fine.
+- NO pause for magnets — cold layer line visible + plate shifts on resume. Press-fit after.
+- Eryone filament: strip cardboard hub, bare spool fits inside Bambu spool shell — no respooling needed.
 
-**Bins status:**
-- Slim brush tray: DESIGNED in OpenSCAD (`~/Documents/`), PRINTING NOW in matte black PETG (~57 min). Print 2×. Mirror along X axis in Bambu to fix magnet hole orientation.
-- Spoon tray: NOT designed — wait to see brush tray result first
-- Basket/puck screen ladder holder: DOWNLOADED `~/Downloads/espresso_round_extracted/` — NOT printed
-- Portafilter bin: DEPRIORITIZED
-- Scale, dosing ring, leveler, WDT, tamp, sweetener: use **ToolTrace** (https://www.tooltrace.ai/) — lay flat, photo, generates custom Gridfinity STL
+**Gridfinity Base Profile (confirmed from kennetek/gridfinity-rebuilt-openscad):**
+- Step 1 (bottom chamfer): 0.8mm wide × 0.8mm tall — `\_/`
+- Straight section: 1.8mm tall — `||`
+- Step 2 (upper chamfer): 2.15mm wide × 2.15mm tall — `\_/`
+- Total foot height: 4.75mm
+- Body corner radius: 3.75mm
+- Clearance: 0.5mm per unit (42mm cell → 41.5mm bin body)
+- Magnet positions: diagonal corners (top-left + bottom-right)
+
+**Strip bins (custom OpenSCAD):**
+- Drawer has a 26mm strip at back (320.7 - 294mm) with no full grid cells
+- Test piece designed: `~/Documents/slim_tray_26x42_test.scad` — 25.5×41.5mm footprint, correct 2-step Gridfinity profile, rounded corners
+- Test piece printed but may be slightly too wide — need to measure actual gap before full tray
+- Original slim tray (210×26mm) was wrong — flat foot, too wide, sat on plate instead of snapping in
+- **TODO:** Measure exact strip gap, adjust width, then design full brush tray for the strip
+
+**Basket holder:**
+- Printing: `Gridfinity_Espresso_Basket_Holders_4_Sizes.3mf` — 83.5×83.5×22.6mm size
+- Ladder/slot system — baskets hang vertically by rim, modular spacing
+- Basket outer diameter: ~76mm (barely 3"), inner clearance 65mm works
+
+**Round bins (OpenSCAD — NOT ToolTrace):**
+- Dosing ring: 76mm diameter (3")
+- Leveler: 63.5mm diameter (2.5")
+- Just cylinders in OpenSCAD, no need for ToolTrace
+
+**Bins TODO:**
+- ✅ Basket holder — PRINTING
+- ⬜ Strip test piece — PRINTED, needs fit check
+- ⬜ Full brush tray for 26mm strip — measure gap first
+- ⬜ Dosing ring bin (76mm cylinder cutout)
+- ⬜ Leveler bin (63.5mm cylinder cutout)
+- ⬜ Scale, WDT, tamp, spoon tray — design later
+- ⬜ Sweetener box bin
+
+**MakerWorld bins:**
+- Baskets: `Gridfinity_Espresso_Basket_Holders_4_Sizes.3mf` (in ~/Downloads)
+- Ladder holder: `~/Downloads/espresso_round_extracted/` (penguinprints model 718533)
 
 **Final drawer item list (Bianca V3 only):**
 1. 18-24g basket (spare)
@@ -80,15 +111,11 @@
 3. Acaia Lunar scale
 4. 2 puck screens
 5. Sweetener box (dollar tree wooden box)
-6. Spouted portafilter (deprioritized)
-7. Dosing ring
-8. Leveler tool (lay flat)
-9. Flick WDT tool (lay flat)
-10. Timemore spring-loaded tamp (lay flat)
-
-**MakerWorld bins:**
-- Baskets + puck screens: penguinprints — https://makerworld.com/en/models/718533
-- Portafilter (round): https://makerworld.com/en/models/718546 (2×2, 83.5mm)
+6. Dosing ring (76mm)
+7. Leveler tool (63.5mm)
+8. Flick WDT tool
+9. Timemore spring-loaded tamp
+10. Group head cleaning brushes (in strip bin)
 
 ---
 
@@ -128,3 +155,4 @@ All files at: `/home/ravi/Desktop/China/edit/`
 - Emojis are fine
 - No trailing summaries ("here's what I did")
 - Long sessions go sideways — reset early, push to GitHub, start fresh chat
+- Delete photos from ~/Downloads immediately after viewing
