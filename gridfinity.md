@@ -39,18 +39,18 @@ Key: `clearance = 0.25mm per side`, `floor_offset = 3.15mm per side`
 | Bin | Size | Status |
 |-----|------|--------|
 | Basket holder (ladder) | 2×2×3 | ✅ Printed |
-| Strip brush tray 15mm | 5-cell strip | ✅ Printing |
-| Dosing ring (71mm hole) | 2×2×3 | ✅ Printing |
-| Distributor (71mm/61mm stepped) | 2×2×3 | ✅ Printing |
-| Spoon trough 3×1 | 3×1×3 | ✅ Printing |
-| Coffee spoon trough 3×1 | 3×1×3 | ✅ Printing |
+| Strip brush tray 15mm | 5-cell strip | ✅ Printed |
+| Dosing ring (71mm hole) | 2×2×3 | ✅ Printed |
+| Distributor (71mm/61mm stepped) | 2×2×3 | ✅ Printed |
+| Spoon trough 3×1 | 3×1×3 | ✅ Printed |
+| Coffee spoon trough 3×1 | 3×1×3 | ✅ Printed |
 | Sweetener box bin | 2×3×8 | ✅ Downloaded |
 | Strip brush tray 10mm | 5-cell strip | ⬜ Designed |
 | Leveler bin (58mm hole) | 2×2×3 | ⬜ Design — same as distributor |
 | Scale bin (Acaia Lunar) | TBD | ⬜ Flat/angled |
-| WDT tool bin | TBD | ⬜ |
-| Tamp bin | TBD | ⬜ |
-| Spoon bin with removable dividers | TBD | ⬜ 37mm slots |
+| WDT tool bin | TBD | ⬜ Used daily — via bin generator |
+| Water atomizer bin | TBD | ⬜ 1.25" dia, lay sideways, half sunk, 3u high |
+| Extra spoon trough | TBD | ⬜ Spoon sideways, 5mm tall, 1.75" wide, half sunk |
 
 ## Drawer Item List (Bianca V3)
 1. 18-24g basket (spare)

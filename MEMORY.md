@@ -19,17 +19,18 @@
 - Files: `~/Documents/slim_tray_26x42_test.scad` (confirmed fit) | `~/Documents/strip_brush_tray_5cell.scad` (15mm walls) | `~/Documents/strip_brush_tray_5cell_10mm.scad` (10mm walls, 1.5mm overhang)
 
 ### Bins Status (2026-04-20)
-- ✅ Basket holder (ladder style) — printed, fits perfectly
-- ✅ Strip brush tray 15mm — PRINTING (6h24m plate)
-- ✅ Dosing ring bin 2×2×3 — on plate
-- ✅ Distributor bin 2×2×3 (71mm outer / 61mm inner / 12mm deep) — on plate
-- ✅ 3×1 spoon trough — on plate
-- ✅ 3×1 coffee spoon trough — on plate
+- ✅ Basket holder (ladder style) — printed
+- ✅ Strip brush tray 15mm — printed
+- ✅ Dosing ring bin 2×2×3 — printed
+- ✅ Distributor bin 2×2×3 (71mm outer / 61mm inner / 12mm deep) — printed
+- ✅ 3×1 spoon trough — printed
+- ✅ 3×1 coffee spoon trough — printed
 - ⬜ Strip brush tray 10mm — designed, not yet printed
 - ⬜ Leveler bin (same as distributor, 58mm hole)
 - ⬜ Scale bin (Acaia Lunar — flat, angled)
-- ⬜ WDT tool bin
-- ⬜ Tamp bin
+- ⬜ WDT tool bin — daily use, via bin generator
+- ⬜ Water atomizer bin — 1.25" dia, lay sideways half-sunk, 3u high
+- ⬜ Extra spoon trough — spoon sideways, 5mm tall, 1.75" wide, half sunk
 - ⬜ Sweetener box bin
 - ⬜ Spoon bin with dividers (37mm slots, removable)
 
@@ -50,6 +51,25 @@
 - Custom bins: **Gridfinity Layout Tool** (https://gridfinitylayouttool.com)
 - Custom strip bins: **OpenSCAD** (`~/Documents/`)
 - Basket holder: MakerWorld download
+
+---
+
+## Mac Mini Monitor Stem Mount (IN PROGRESS)
+- File: `~/Documents/mac_mini_mount.scad`
+- One-piece PETG print — collar clamps vertical monitor arm stem (35mm dia), box holds Mac Mini inside
+- Print material: **Bambu matte black PETG** (Eryone too shiny, PLA ruled out — heat risk)
+- Box interior: 198×197×47mm (Mac Mini is 197×197×36mm — fits with clearance)
+- Collar: M4 clamp bolts at BACK, split gap opens rearward
+- Port cutouts: left + right of collar for cable access
+- Bottom vent hole: 171.5mm dia centered on floor (Mac Mini intake)
+- Top surface: solid shelf, logo to be done via Bambu texture painting
+- Rounded vertical edges with hull() — no minkowski (too slow)
+- Status: needs render check, then Mac Mini fit test, then slice
+
+### Fixes applied this session
+- `box_w = 222` (interior 198mm — was 196mm, too tight for 197mm Mac Mini)
+- Vent hole re-centered (was +30mm offset, was clipping front lip)
+- Retaining lip raised to `floor_t + 10 = 18mm` (was 10mm, too short to catch chassis)
 
 ---
 
