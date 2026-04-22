@@ -54,22 +54,20 @@
 
 ---
 
-## Mac Mini Monitor Stem Mount (IN PROGRESS)
+## Mac Mini Monitor Stem Mount (PRINTING 2026-04-21)
 - File: `~/Documents/mac_mini_mount.scad`
 - One-piece PETG print — collar clamps vertical monitor arm stem (35mm dia), box holds Mac Mini inside
-- Print material: **Bambu matte black PETG** (Eryone too shiny, PLA ruled out — heat risk)
-- Box interior: 198×197×47mm (Mac Mini is 197×197×36mm — fits with clearance)
+- Print material: **gloss PETG test print** (matte black is final if gloss looks bad)
+- Mac Mini: 7.75" × 7.75" × 1.5" = 196.85 × 196.85 × 38.1mm
+- Box interior: 200×198×47mm — 1.57mm per side width clearance
+- `box_w = 224`, `box_d = 188` — fits P1S 256×256mm plate
 - Collar: M4 clamp bolts at BACK, split gap opens rearward
 - Port cutouts: left + right of collar for cable access
 - Bottom vent hole: 171.5mm dia centered on floor (Mac Mini intake)
-- Top surface: solid shelf, logo to be done via Bambu texture painting
-- Rounded vertical edges with hull() — no minkowski (too slow)
-- Status: needs render check, then Mac Mini fit test, then slice
-
-### Fixes applied this session
-- `box_w = 222` (interior 198mm — was 196mm, too tight for 197mm Mac Mini)
-- Vent hole re-centered (was +30mm offset, was clipping front lip)
-- Retaining lip raised to `floor_t + 10 = 18mm` (was 10mm, too short to catch chassis)
+- Side finger holes: 25mm dia, both sides, ~0.5" behind vent circle — power button access
+- Front retaining lip REMOVED (was sticking out awkwardly)
+- Top surface: solid shelf, Steelers logo TBD via Bambu texture painting
+- Status: **PRINTING NOW** — gyroid 15% infill
 
 ---
 
@@ -81,6 +79,18 @@
 - Amp: Facmogu F900S installed, working
 
 ---
+
+## MoneyMate — AI Personal Finance Agent (IN PROGRESS)
+- Vision: proactive AI agent that knows YNAB, calendar, health data, points — texts you on Telegram when to act
+- "The personal assistant the wealthy have always had, for regular people"
+- Target audience: YNAB users frustrated with no payment execution
+- Stack: Claude API + Telegram Bot + YNAB API + Stripe + health/calendar APIs
+- Bot: **@moneymateaibot** on Telegram — running on Mac Mini
+- Files: `~/moneymate/` — Node.js, `.env` has keys
+- Status: Telegram bot alive, Claude (Haiku) connected, responding to messages
+- Next: YNAB API key, connect budget data, build proactive notifications
+- TODO: Rethink architecture — should be agent-first (it texts YOU), not chatbot-first
+- YNAB needs full reset — currently 24k over-assigned, do fresh setup when bot is ready
 
 ## Future Ideas
 - **Punjabi 3D prints** — Khanda, Ik Onkar, nameplates for trucker dashboards. Etsy + Facebook Punjabi trucker groups. $20-30/piece
