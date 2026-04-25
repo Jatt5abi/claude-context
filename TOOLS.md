@@ -17,15 +17,14 @@
 - BCM UART Bluetooth was failing
 - Fixed: `sudo apt install apple-firmware-script` → `sudo get-apple-firmware` (option 3) → full reboot
 
-## Keyboard Shortcuts (mapped 2026-04-20)
-- **F1** — Open Spotify
-- **F2** — Volume down
-- **F3** — Volume up
-- **F4** — Mute
-- **F5** — Stop
-- **F6** — Previous track
-- **F7** — Play/Pause
-- **F8** — Next track
+## Keyboard Shortcuts — Aula S99 Pro (updated 2026-04-24, via gsettings)
+- **F7** — Previous track
+- **F8** — Play/Pause
+- **F9** — Next track
+- **F10** — Mute
+- **F11** — Volume down
+- **F12** — Volume up
+- Note: input-remapper not needed — gsettings binds F7-F12 directly
 
 ## Audio
 - Speakers: Pioneer passive bookshelf (left tweeter blown — needs replacement)
@@ -34,8 +33,13 @@
 
 ## Useful Commands
 ```bash
-# Spotify shortcut gsettings
-gsettings set org.gnome.settings-daemon.plugins.media-keys volume-down "['F2']"
+# Media keys gsettings (Aula S99 Pro)
+gsettings set org.gnome.settings-daemon.plugins.media-keys previous "['F7']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys play "['F8']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys next "['F9']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys volume-mute "['F10']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys volume-down "['F11']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys volume-up "['F12']"
 
 # Package install pattern
 sudo apt install <package>
