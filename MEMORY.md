@@ -80,18 +80,6 @@
 
 ---
 
-## MoneyMate — AI Personal Finance Agent (IN PROGRESS)
-- Vision: proactive AI agent that knows YNAB, calendar, health data, points — texts you on Telegram when to act
-- "The personal assistant the wealthy have always had, for regular people"
-- Target audience: YNAB users frustrated with no payment execution
-- Stack: Claude API + Telegram Bot + YNAB API + Stripe + health/calendar APIs
-- Bot: **@moneymateaibot** on Telegram — running on Mac Mini
-- Files: `~/moneymate/` — Node.js, `.env` has keys
-- Status: Telegram bot alive, Claude (Haiku) connected, responding to messages
-- Next: YNAB API key, connect budget data, build proactive notifications
-- TODO: Rethink architecture — should be agent-first (it texts YOU), not chatbot-first
-- YNAB needs full reset — currently 24k over-assigned, do fresh setup when bot is ready
-
 ## Future Ideas
 - **Punjabi 3D prints** — Khanda, Ik Onkar, nameplates for trucker dashboards. Etsy + Facebook Punjabi trucker groups. $20-30/piece
 - **Day trading** — learn over summer, paper trade first. Need $25K min (PDT rule). Off season Nov 2026.
