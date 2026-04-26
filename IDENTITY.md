@@ -13,7 +13,7 @@
 - Off season: November – March
 
 ## Devices
-- **Phone:** Samsung Galaxy Z Fold 3 SM-F966U1 (Android 16)
+- **Phone:** Samsung Galaxy Z Fold 7 (Android 16)
 - **Computer:** Mac Mini (Apple T2, running Ubuntu t2-noble kernel 6.19.11)
 - **Printer:** Bambu P1S
 
