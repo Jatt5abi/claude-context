@@ -108,6 +108,26 @@
 - CDL driver application PWA
 - Last worked: v15, Isabel email, I-9 attestation, all sig fixes
 
+## Pale Horse — Daily Freight Bill (Digital Ticket Plan)
+
+- Trevor owns Pale Horse Asphalt Engineering, Dixon CA — 4 spreader trucks
+- Bills per hour, prevailing wage from job site arrival
+- **Actual paper form (Freight Bill #22276) fields:**
+  - Header: Date, Day, Origin, Loading Site, Destination
+  - Customer, Customer Project #, Project Name, PH Project #
+  - Truck #, Trailer #, Truck Product, Trailer Product, BOL #s (truck + trailer)
+  - Instructions/Notes
+  - Starting Gallons (est), Ending Gallons (est), Gallons Used (est)
+  - SYDS Spread (est)
+  - Times: On Duty, Arrive Time, Scheduled Spread Start, Actual Spread Start, Finish Spread, Off Duty (all AM/PM)
+  - Meal break checkboxes (DOT compliance)
+  - Driver Initials, Total Spread Hours, Total Hours
+  - Customer/Rep print + signature, Driver signature
+- **Digital plan:** PWA on Samsung tabs (kiosk mode) → foreman signs on tablet → BT thermal print on site → submit goes to Google Sheets by project number → Isabel monitors + bills
+- TeamUp calendar integration to pre-fill project name/number/location
+- MVP = digitize the paper first. Dashboard/ADP payroll integration later.
+- Ravi wants to use it in the field first before building — check back after field season starts
+
 ---
 
 ## Peptide Storage Box (OpenSCAD)
