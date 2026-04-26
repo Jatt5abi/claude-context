@@ -32,3 +32,12 @@
 - Scrapped MoneyMate — deleted, archived
 - Set up 2-tier memory system (MEMORY.md + ARCHIVE.md)
 - Heyron/OpenClaw Discord — Jeem's skill repo reviewed
+- Installed FreeTube (flatpak) — ad-free YouTube on Mac Mini
+- Pale Horse next phase discussed: Trevor's daily spread ticket → digital
+  - 4-truck paving fleet, bills per hr, spreader time
+  - Daily ticket: arrival, start spread, finish spread, end of day + gallons used
+  - Foreman signs on tablet → thermal print on site, submit goes to Isabel/Google Sheets
+  - Samsung tabs in kiosk mode + cheap BT thermal printer per truck (~$150-200/truck)
+  - TeamUp calendar integration to pre-fill project name/number/location
+  - MVP = kill the paper first, dashboard/ADP later
+- 3D print idea: travel containers for sister (MakerWorld design, ~90mm dia × 40mm deep)
