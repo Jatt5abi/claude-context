@@ -41,3 +41,10 @@
   - TeamUp calendar integration to pre-fill project name/number/location
   - MVP = kill the paper first, dashboard/ADP later
 - 3D print idea: travel containers for sister (MakerWorld design, ~90mm dia × 40mm deep)
+- Heyron Agent Jam competition — Ravi entering with Harry's memory system
+  - Theme: "Build the memory system you wish your agent had"
+  - Competitor: StellarTogether (just a trigger glossary — easy to beat)
+  - Harry's repo: https://github.com/assistant76harry/harry-memory (now public)
+  - Harry has: 2-tier memory, daily logs, heartbeat protocol, 54 skills, search_memory.py
+  - TODO: clean repo (remove credentials), write README, MIT license, record 2-5 min demo
+  - Harry named after Frank Bruno — "You know what I mean, 'arry!"
